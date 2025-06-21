@@ -1,0 +1,79 @@
+# LEXWARE-FORMAT (Standard)
+Monat,Rechnungsnummer,Leistungsdatum,Rechnungsdatum,Kunde,Bezeichnung,Nettobetrag,Steuerbetrag,Bruttobetrag,Steuersatz,Kategorie,Status
+"Januar 2025","2025-001","01.01.2025","02.01.2025","Tech Solutions GmbH","Webdesign Projekt Alpha - Konzeptentwicklung","1050.42","199.58","1250.00","19%","IT-Dienstleistungen","bezahlt"
+"Januar 2025","2025-002","15.01.2025","16.01.2025","Marketing Pro AG","SEO Optimierung Website Beta","714.29","135.71","850.00","19%","Marketing","offen"
+"Januar 2025","2025-003","28.01.2025","30.01.2025","Server Hosting Ltd","Monatliche Wartung Server Infrastructure","378.15","71.85","450.00","19%","IT-Services","bezahlt"
+"Februar 2025","2025-004","02.02.2025","03.02.2025","Startup Innovations","Logo Design für Startup Gamma","630.25","119.75","750.00","19%","Design","bezahlt"
+"Februar 2025","2025-005","14.02.2025","15.02.2025","Social Media Masters","Social Media Marketing Kampagne","924.37","175.63","1100.00","19%","Marketing","überfällig"
+"Februar 2025","2025-006","25.02.2025","26.02.2025","E-Commerce Experts","E-Commerce Shop Setup und Konfiguration","1932.77","367.23","2300.00","19%","E-Commerce","bezahlt"
+
+# DATEV-FORMAT (Steuerberater)
+Belegnummer;Buchungsdatum;Leistungsdatum;Betrag;Steuer;Gegenkonto;Buchungstext;Kostenstelle
+2025-001;02012025;01012025;1050,42;199,58;8400;Webdesign Projekt Alpha - Konzeptentwicklung;100
+2025-002;16012025;15012025;714,29;135,71;8400;SEO Optimierung Website Beta;200
+2025-003;30012025;28012025;378,15;71,85;8400;Monatliche Wartung Server Infrastructure;100
+2025-004;03022025;02022025;630,25;119,75;8400;Logo Design für Startup Gamma;300
+2025-005;15022025;14022025;924,37;175,63;8400;Social Media Marketing Kampagne;200
+2025-006;26022025;25022025;1932,77;367,23;8400;E-Commerce Shop Setup und Konfiguration;400
+
+# STEUERBERATER-FORMAT (Erweitert)
+Periode	Belegnummer	Datum	Beschreibung	Netto	USt	Brutto	USt-Satz	Kunde	Kategorie	Projekt	Zahlungsart
+"Januar/2025"	"2025-001"	"01.01.2025"	"Webdesign Projekt Alpha - Konzeptentwicklung"	"1050.42"	"199.58"	"1250.00"	"19%"	"Tech Solutions GmbH"	"IT-Dienstleistungen"	"PROJ-001"	"Überweisung"
+"Januar/2025"	"2025-002"	"15.01.2025"	"SEO Optimierung Website Beta"	"714.29"	"135.71"	"850.00"	"19%"	"Marketing Pro AG"	"Marketing"	"PROJ-002"	"Lastschrift"
+"Januar/2025"	"2025-003"	"28.01.2025"	"Monatliche Wartung Server Infrastructure"	"378.15"	"71.85"	"450.00"	"19%"	"Server Hosting Ltd"	"IT-Services"	"MAINT-001"	"Überweisung"
+
+# VOLLSTÄNDIGE ANALYSE-DATEI (Alle Spalten)
+Monat,Jahr,Quartal,KW,Rechnungsnummer,Leistungsdatum,Rechnungsdatum,Fälligkeitsdatum,Kunde_Name,Kunde_Nummer,Bezeichnung,Nettobetrag,Steuerbetrag,Bruttobetrag,Steuersatz,Währung,Kategorie,Kostenstelle,Projekt_Code,Status,Zahlungsart,Verarbeitet_Am,Validierung_Status,Datenquelle,Besonderheiten
+"Januar","2025","Q1","1","2025-001","01.01.2025","02.01.2025","16.01.2025","Tech Solutions GmbH","KD-001","Webdesign Projekt Alpha - Konzeptentwicklung","1050.42","199.58","1250.00","19.0","EUR","IT-Dienstleistungen","COST-100","PROJ-001","bezahlt","Überweisung","2025-01-02T10:30:00Z","OK","Lexware API",""
+"Januar","2025","Q1","3","2025-002","15.01.2025","16.01.2025","30.01.2025","Marketing Pro AG","KD-002","SEO Optimierung Website Beta","714.29","135.71","850.00","19.0","EUR","Marketing","COST-200","PROJ-002","offen","Lastschrift","2025-01-16T14:15:00Z","OK","Lexware API",""
+"Januar","2025","Q1","4","2025-003","28.01.2025","30.01.2025","13.02.2025","Server Hosting Ltd","KD-003","Monatliche Wartung Server Infrastructure","378.15","71.85","450.00","19.0","EUR","IT-Services","COST-100","MAINT-001","bezahlt","Überweisung","2025-01-30T16:45:00Z","OK","Lexware API","Wiederkehrende Rechnung"
+"Februar","2025","Q1","5","2025-004","02.02.2025","03.02.2025","17.02.2025","Startup Innovations","KD-004","Logo Design für Startup Gamma","630.25","119.75","750.00","19.0","EUR","Design","COST-300","PROJ-003","bezahlt","Überweisung","2025-02-03T09:20:00Z","OK","Lexware API",""
+"Februar","2025","Q1","7","2025-005","14.02.2025","15.02.2025","01.03.2025","Social Media Masters","KD-005","Social Media Marketing Kampagne","924.37","175.63","1100.00","19.0","EUR","Marketing","COST-200","PROJ-004","überfällig","Überweisung","2025-02-15T11:30:00Z","WARNUNG","Lexware API","Zahlungsverzug"
+"Februar","2025","Q1","8","2025-006","25.02.2025","26.02.2025","12.03.2025","E-Commerce Experts","KD-006","E-Commerce Shop Setup und Konfiguration","1932.77","367.23","2300.00","19.0","EUR","E-Commerce","COST-400","PROJ-005","bezahlt","Überweisung","2025-02-26T13:45:00Z","OK","Lexware API","Großauftrag"
+
+# INTERNATIONALE RECHNUNGEN (Multi-Währung)
+Monat,Rechnungsnummer,Leistungsdatum,Kunde,Bezeichnung,Betrag_Original,Währung_Original,Betrag_EUR,Umrechnungskurs,Steuersatz,Status
+"März 2025","2025-007","05.03.2025","US Client Corp","Software Development Services","$2.850,00","USD","€2.565,00","1.111","0%","bezahlt"
+"März 2025","2025-008","12.03.2025","Swiss AG","Consulting Services","CHF 1.200,00","CHF","€1.080,00","1.111","0%","offen"
+"März 2025","2025-009","18.03.2025","UK Limited","Web Design Project","£1.500,00","GBP","€1.755,00","0.855","20%","bezahlt"
+
+# KATEGORIEN-ZUSAMMENFASSUNG
+Kategorie,Anzahl_Rechnungen,Gesamtbetrag_Netto,Gesamtbetrag_Brutto,Durchschnittsbetrag,Anteil_Gesamtumsatz
+"IT-Dienstleistungen","15","18.750,00","22.312,50","1.487,50","35.2%"
+"Marketing","8","12.300,00","14.637,00","1.829,62","23.1%"
+"Design","6","7.500,00","8.925,00","1.487,50","14.1%"
+"E-Commerce","4","8.900,00","10.591,00","2.647,75","16.7%"
+"Consulting","3","5.200,00","6.188,00","2.062,67","9.8%"
+"Wartung","2","850,00","1.011,50","505,75","1.6%"
+
+# MONATS-STATISTIKEN
+Monat,Anzahl_Rechnungen,Umsatz_Brutto,Umsatz_Netto,Steuer_Gesamt,Durchschnitt_pro_Rechnung,Neue_Kunden,Wiederkehrende_Kunden,Zahlungsziel_Ø
+"Januar 2025","12","15.240,00","12.806,72","2.433,28","1.270,00","3","9","14.2"
+"Februar 2025","14","18.350,00","15.420,17","2.929,83","1.310,71","2","12","15.8"
+"März 2025","16","22.100,00","18.571,43","3.528,57","1.381,25","4","12","16.1"
+"April 2025","18","26.750,00","22.478,99","4.271,01","1.486,11","1","17","15.9"
+"Mai 2025","15","21.800,00","18.319,33","3.480,67","1.453,33","2","13","14.7"
+
+# KUNDEN-ANALYSE
+Kunde_Name,Anzahl_Rechnungen,Umsatz_Gesamt,Letzter_Auftrag,Zahlungsverhalten,Kundenstatus,Durchschnittliche_Auftragswerte
+"Tech Solutions GmbH","8","12.450,00","2025-05-15","Pünktlich","Premium","€1.556,25"
+"Marketing Pro AG","6","7.800,00","2025-04-20","1 Tag Verzug","Standard","€1.300,00"
+"Server Hosting Ltd","12","5.400,00","2025-05-30","Pünktlich","Premium","€450,00"
+"Startup Innovations","4","3.200,00","2025-03-10","Pünktlich","Standard","€800,00"
+"Social Media Masters","3","3.850,00","2025-02-14","5 Tage Verzug","Risiko","€1.283,33"
+
+# STEUER-AUFSTELLUNG (Quartal)
+Quartal,Steuersatz,Nettoumsatz,Steuerbetrag,Bruttoumsatz,Anzahl_Belege
+"Q1 2025","19%","45.798,62","8.701,64","54.500,26","38"
+"Q1 2025","7%","2.800,00","196,00","2.996,00","2"
+"Q1 2025","0%","5.600,00","0,00","5.600,00","4"
+"Gesamt Q1","--","54.198,62","8.897,64","63.096,26","44"
+
+# COMPLIANCE-REPORT
+Prüfkriterium,Status,Anzahl_Belege,Anteil,Handlungsbedarf
+"Fortlaufende Rechnungsnummern","OK","44","100%","Nein"
+"Vollständige Kundendaten","OK","44","100%","Nein"
+"Korrekte Steuerausweise","WARNUNG","42","95.5%","2 Belege prüfen"
+"Leistungsdatum vorhanden","OK","44","100%","Nein"
+"Zahlungsziele eingehalten","WARNUNG","41","93.2%","3 Mahnungen erforderlich"
+"GoBD-konforme Archivierung","OK","44","100%","Nein"
